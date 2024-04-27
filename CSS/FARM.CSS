@@ -3,4 +3,10 @@ heading h1{
     text-transform: uppercase;
     color: var(--white);
     text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration:wavy;
+    text-shadow: var(--text-shadow)
 }
