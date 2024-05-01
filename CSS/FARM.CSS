@@ -38,3 +38,6 @@ tr:nth-child(odd){
 tr:hover{
     background-color:#78371c;
 }
+ol{
+    color: green;
+}
