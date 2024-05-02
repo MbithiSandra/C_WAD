@@ -65,7 +65,7 @@ ol{
 }
 .home-projects .Heading-title{
     font-size: 2rem;
-    margin-left: 2rem;
+    margin-left: 5rem;
     color: black;
 }
 .home-projects .box-container{
@@ -100,6 +100,16 @@ ol{
 .home-projects .box-container .box .content p{
     font-size: 1.5rem;
     color: lightslategrey;
+    line-height: 2;
+    padding: 1rem 0;
+}
+.home-projects .load-more{
+    text-align: center;
+    margin-top: 2rem;
+}
+.home-projects .box-container .box .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
     line-height: 2;
     padding: 1rem 0;
 }
