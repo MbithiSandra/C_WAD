@@ -1,3 +1,15 @@
+:root{
+    --main-color: #2ac879e5;
+    --black:#222;
+    --white: #fff ;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bg:rgba(0,0,0,.7);
+    --light-bg:#eee;
+    --border:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+}
 h1{
     font-size: 4rem;
     text-transform: uppercase;
@@ -14,6 +26,7 @@ h2{
     text-transform: uppercase;
     text-decoration: underline;
 }
+
 p{
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
@@ -45,4 +58,52 @@ tr:hover{
 }
 ol{
     color: green;
+}
+
+.home-projects{
+    background-image: url(C:\xampp\htdocs\C_WAD\Images\background8.jpg);
+}
+.home-projects .Heading-title{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: black;
+}
+.home-projects .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem 1 fr));
+    gap: 1rem;
+}
+.home-projects .box-container .box{
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+   
+}
+.home-projects .box-container  .image{
+    height: 50rem;
+    overflow: hidden;
+}
+.home-projects .box-container .image img{
+    height: 80%;
+    width: 100%;
+    object-fit:cover;
+    transition: .2s linear;
+}
+.home-projects .box-container .box .content{
+    padding: 1rem;
+    text-align: center;
+}
+.home-projects .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #783D19;
+}
+.home-projects .box-container .box .content p{
+    font-size: 1.5rem;
+    color: lightslategrey;
+    line-height: 2;
+    padding: 1rem 0;
+}
+.home-projects .load-more{
+    text-align: center;
+    margin-top: 2rem;
 }
