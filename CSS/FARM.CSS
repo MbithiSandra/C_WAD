@@ -12,6 +12,9 @@
     --russet: #783D19;
     --laurelgreen: #A9B388;
 }
+head.body {
+    background-image: url(Images/background13.jpeg);
+} 
 h1{
     font-size: 4rem;
     text-transform: uppercase;
