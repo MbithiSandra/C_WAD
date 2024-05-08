@@ -194,3 +194,42 @@ ol{
     color: var(--russet);
     display: none;
 }
+
+.booking .heading-title{
+    color: var(--russet);
+}
+.booking .book-form{
+    padding: 2rem;
+    background: var(--light-bg);
+}
+.booking .book-form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.booking .book-form .flex .inputBox{
+    flex: 1 1 31rem;
+}
+.booking .book-form .flex .inputBox input{
+    width: 50%;
+    padding: 1.0rem 1.2rem;
+    font-size: 1.2rem;
+    color: var(--light-black);
+    text-transform: none;
+    margin-top: 1.0rem;
+    border: var(--border);
+}
+.booking .book-form .flex .inputBox input:focus{
+    background: var(--laurelgreen);
+    color: var(--white);
+}
+.booking .book-form .flex .inputBox input:focus::placeholder{
+    color: var(--light-white);
+}
+.booking .book-form .flex .inputBox span{
+    font-size: 1.5rem;
+    color: var(--light-black);
+}
+.booking .book-form .btn{
+    margin-top: 2rem;
+}
