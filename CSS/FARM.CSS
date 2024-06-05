@@ -173,29 +173,88 @@ ol{
     color: var(--black);
 }
 .header{
-    position: sticky;
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
-    background-color: #eaf5e7;
-    display: flex;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    box-shadow: var(--box-shadow);
-    align-items: center;
-    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
 }
-.header .logo{
-    font-size: 1.3rem;
-    color:var(--russet);
+
+body{
+    background: white;
 }
-.header .navbar a{
-    font-size: 1.0rem;
-    margin-left: 3rem;
-    color: #722205;
+nav{
+    background: #1e2a26;
+    color: white;
 }
-.header .navbar a:hover{
-    color: var(--main-color);
+a{
+    color: white;
 }
+nav::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+nav .logo{
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+    display: none;
+}
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+nav ul li{
+    display: inline-block;
+    background: #1e2a26;
+    margin: 0 5px;
+
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+nav ul li a:hover{
+    border-radius: 5px;
+   box-shadow: 0 0 5px #FFA500,
+               0 0 5px #FFA500;
+}
+nav ul ul{
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+}
+.show, input{
+    display: none;
+}
+@media all and (max-width:968px){
+    nav ul{
+        margin-right: 0px;
+        float: left;
+    }
+    nav .logo{
+        padding-left: 30px;
+        width: 100%;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+    }
+    .show{
+        display: block;
+        color: white;
+    }
+}
+
 .menu-btn{
     font-size: 2.5rem;
     cursor: pointer;
