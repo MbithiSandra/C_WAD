@@ -80,9 +80,10 @@ ol{
     background-image: url(C:\xampp\htdocs\C_WAD\Images\background8.jpg);
 }
 .home-projects .Heading-title{
-    font-size: 2rem;
-    margin-left: 5rem;
-    color: black;
+    text-align: left ;
+    color: rgba(9, 161, 34, 0.856); 
+    text-transform: uppercase;
+    text-decoration: underline;
 }
 .home-projects .box-container{
     display: grid;
@@ -128,6 +129,13 @@ ol{
     text-align: center;
     margin-top: 2rem;
 }
+.fixed-size {
+    width: 100%;  
+    height: auto;  
+    max-height: 300px;  
+    object-fit: cover;  
+}
+
 
 
 .heading{
@@ -183,7 +191,7 @@ ol{
 .header .navbar a{
     font-size: 1.0rem;
     margin-left: 3rem;
-    color: #E89375;
+    color: #722205;
 }
 .header .navbar a:hover{
     color: var(--main-color);
