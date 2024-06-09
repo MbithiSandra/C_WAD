@@ -40,8 +40,9 @@ p{
 
 table{
    border: solid 1px 373737; 
-   width: 50%;
+   width: 80%;
    border-collapse: collapse;
+   
 }
 td{
     border: solid 1px 373737;  
@@ -59,7 +60,7 @@ tr:nth-child(odd){
     background-color: #a9f0d2;
 }
 tr:hover{
-    background-color:#78371c;
+    background-color:#FF6E00;
 }
 ol{
     color: green;
