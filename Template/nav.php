@@ -8,7 +8,7 @@
                 
                   <li><a href="index.php">HOME</a></li>
                   <li><a href="about.php">ABOUT</a></li>
-                  <li><a href="animals.php">OUR ANIMALS</a></li>
+                  <li><a href="animals.php">ANIMALS</a></li>
                   <li><a href="products.php">PRODUCTS</a></li>
                   <li><a href="farmtour.php">FARMTOURS</a></li>
                   <li><a href="contactus.php">CONTACT</a></li>

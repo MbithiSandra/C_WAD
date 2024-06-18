@@ -65,9 +65,9 @@
     <footer>
         <p>
             Welcome<i class="fa fa-heart"></i> to
-            <a target="_blank" href="index.html">Kyase Ranch</a>
+            <a target="_blank" href="index.php">Kyase Ranch</a>
             - a place of fresh produce, quality products and realtime experience
-            <a target="_blank" href="index.html">here</a>.
+            <a target="_blank" href="index.php">here</a>.
         </p>
     </footer>
 
