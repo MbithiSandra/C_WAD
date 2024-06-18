@@ -2,10 +2,14 @@
     <div class="box-container">
         <div class="box">
             <h3>quick links</h3>
-            <a href="Home.html"> <i class="fas fa-angle-right"></i>HOME</a>
-            <a href="About.html"> <i class="fas fa-angle-right"></i>ABOUT</a>
-            <a href="Projects.html"> <i class="fas fa-angle-right"></i>PROJECTS</a>
-            <a href="Book.html"> <i class="fas fa-angle-right"></i>BOOK</a>
+            <a href="index.php"> <i class="fas fa-angle-right"></i>HOME</a>
+            <a href="about.php"> <i class="fas fa-angle-right"></i>ABOUT</a>
+            <a href="animals.php"><i class="fas fa-angle-right"></i>ANIMALS</a>
+            <a href="products.php"><i class="fas fa-angle-right"></i>PRODUCTS</a>
+            <a href="farmtour.php"><i class="fas fa-angle-right"></i>FARMTOURS</a>
+            <a href="contactus.php"><i class="fas fa-angle-right"></i>CONTACT</a>
+            <a href="blog.php"><i class="fas fa-angle-right"></i>BLOG/NEWS</a>
+            <a href="login.php"><i class="fas fa-angle-right"></i>LOGIN</a>         
         </div>
 
         <div class="box">
@@ -20,7 +24,7 @@
             <h3>Contact Info</h3>
             <a href="#"> <i class="fas fa-phone"></i>+254712307083</a>
             <a href="#"> <i class="fas fa-phone"></i>+254720416466</a>
-            <a href="#"> <i class="fas fa-envelope"></i>alemserviceslimited@gmail.com</a>
+            <a href="#"> <i class="fas fa-envelope"></i>kyaseranch@gmail.com</a>
             <a href="#"> <i class="fas fa-map"></i>Nairobi, Kenya</a>
         </div>
         <div class="box">
