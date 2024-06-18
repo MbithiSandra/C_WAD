@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <!-- custom css file link -->
-    <link rel="stylesheet" href="CSS/FARM.CSS">
+        <link rel="stylesheet" type="text/css" href="/CSS/FARM.CSS">
 <style>
 
 </style>    
@@ -21,9 +21,8 @@
 <body style="background-image: url(Images/back.jpg);">
 
         <!-- header section starts -->
-      
-
-        
+     
+        <?php include_once"Template/nav.php";?>    
       
        <h2 >WELCOME</h2>
         <p>At Kyase Ranch, we're more than just a farm. We're a community dedicated to sustainable agriculture
@@ -41,13 +40,13 @@
         
 
               <section class="home-projects">
-                <h1 class="Heading-title">Featured</h1>
+                <h1 class="Heading-title"> Featured </h1>
             
                
                 
 
                 <div class="container-fluid text-center bg-grey">
-                    <h4>Entailed in our farms is:</h4>
+                    <h4> Entailed in our farms is: </h4>
                     <div class="row text-center">
                       <div class="col-sm-6">
                         <div class="thumbnail">
@@ -95,7 +94,7 @@
             type="video/ogg">
         </video>
     </div>
-        
+  
     
     </body>
     </html>
