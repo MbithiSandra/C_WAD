@@ -78,7 +78,7 @@
     </section>
 
 
-
+    <?php include_once("Template/nav.php");?> 
 
 </body>
 </html>

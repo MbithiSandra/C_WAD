@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="/CSS/FOOTER.CSS">
 <section class="footer">
     <div class="box-container">
         <div class="box">
