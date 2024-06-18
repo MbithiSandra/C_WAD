@@ -83,9 +83,10 @@
          <section class="home-about">
             <div class="image">
                 <video width="1000" height="300" autoplay muted controls loop>
-                    <source src="C:\xampp\htdocs\C_WAD\Images\mixkit-calves-feeding-in-a-meadow-with-grass-41404-medium.mp4">
+                    <source src="http://localhost\C_WAD\Images\mixkit-calves-feeding-in-a-meadow-with-grass-41404-medium.mp4">
                     <source src="C:\Users\mbith\OneDrive\Desktop\Construction project\images\about-vid.ogg"
                     type="video/ogg">
+                 
                 </video>
             </div>
 

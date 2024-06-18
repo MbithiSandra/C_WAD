@@ -11,12 +11,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- custom css file link -->
-    <link rel="stylesheet" type="text/css" href="/CSS/FARM.CSS">
+    <link rel="stylesheet" href="CSS/FARM.CSS">
 </head>
 <body style="background-image: url(Images/background13.jpeg);">
     <!-- header section starts -->
-    <?php include_once("Template/nav.php"); ?>
+
+
+    <?php include_once("Template/nav.php");?> 
     
+
     <h2>WELCOME</h2>
     <p>At Kyase Ranch, we're more than just a farm. We're a community dedicated to sustainable agriculture and connecting people with the beauty of the countryside. Nestled in the heart of Makueni, our ranch is a sanctuary where animals roam freely, and the land flourishes with abundance.</p>
     
@@ -67,10 +70,15 @@
     <section class="home-about">
         <div class="image">
             <video width="320" height="240" autoplay muted controls loop>
-                <source src="/Images/mixkit-goat-feeding-in-the-grass-34832-medium.mp4" type="video/mp4">
+                <source src="http://localhost/C_WAD/Images/mixkit-goat-feeding-in-the-grass-34832-medium.mp4" type="video/mp4">
                 <source src="/Images/about-vid.ogg" type="video/ogg">
+                Your browser does not support the video tag.
             </video>
         </div>
     </section>
+    https://mixkit.co/free-stock-video/goat-eating-grass-in-a-meadow-15328/
+
+
+
 </body>
 </html>

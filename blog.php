@@ -37,7 +37,7 @@
      <p>Next week's training will be on how to properly milk cows</p>
      <div class="image">
         <video width="700" height="300" autoplay muted controls loop>
-            <source src="C:\xampp\htdocs\C_WAD\Images\mixkit-mature-woman-milking-a-cow-47196-medium.mp4">
+            <source src="http://localhost\C_WAD\Images\mixkit-mature-woman-milking-a-cow-47196-medium.mp4">
             <source src="C:\Users\mbith\OneDrive\Desktop\Construction project\images\about-vid.ogg"
             type="video/ogg">
         </video>
