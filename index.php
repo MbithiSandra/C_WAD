@@ -77,8 +77,8 @@
         </div>
     </section>
 
-
-    <?php include_once("Template/nav.php");?> 
+    <?php include_once("Template/footer.php");?> 
+  
 
 </body>
 </html>

@@ -1,5 +1,5 @@
-<link rel="stylesheet" type="text/css" href="/CSS/FOOTER.CSS">
 <section class="footer">
+<link rel="stylesheet" href="/CSS/FOOTER.CSS">
     <div class="box-container">
         <div class="box">
             <h3>quick links</h3>

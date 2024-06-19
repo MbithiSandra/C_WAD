@@ -22,9 +22,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     gap: 3rem;
+   
 }
 .footer .box-container .box h3{
-    color: var(--white);
+    color: red;
     font-size: 2.5rem;
     padding-bottom: 2rem;
 }
