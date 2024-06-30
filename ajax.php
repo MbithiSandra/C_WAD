@@ -20,6 +20,39 @@
                         </ul>
                     </div>
                 </div>
+
+<table class="table table-dark table-hover" >
+    <thead>
+        <th scope="col">#</th>
+        <th scope="col">Handle</th>
+        <th scope="col">Fullname</th>
+        <th scope="col">Email</th>
+    </thead>
+    <tbody>
+<?php
+    require_once "includes/db1_connect.php";
+$sel_stds = "SELECT * FROM students ORDER BY fullname ASC";
+$sel_res = ($conn->query($sel_stds));
+//for default increment of numbers
+$sn=0;
+
+while($sel_row = $sel_res->fetch_assoc()){
+    $sn++;
+?>
+<tr>
+    <td><?php print $sn;?></td>
+    <td><?php print $sel_row["username"];?></td>
+    <td><?php print $sel_row["fullname"];?></td>
+    <td><?php print $sel_row["email"];?></td>
+    
+    <td></td>
+</tr>
+<?php
+}
+?>
+    </tbody>
+
+</table>
             </div>
         </div>
     </div>
