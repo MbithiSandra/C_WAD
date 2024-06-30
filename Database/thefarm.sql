@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 30, 2024 at 11:29 AM
+-- Generation Time: Jun 30, 2024 at 11:48 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,6 +38,31 @@ CREATE TABLE `employee` (
   `EmploymentStatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Truncate table before insert `employee`
+--
+
+TRUNCATE TABLE `employee`;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trainer`
+--
+
+DROP TABLE IF EXISTS `trainer`;
+CREATE TABLE `trainer` (
+  `TrainerID` varchar(11) NOT NULL,
+  `TrainerName` varchar(50) NOT NULL,
+  `Specialization` varchar(50) NOT NULL,
+  `YearsOfExperience` int(50) NOT NULL,
+  `EmploymentStatus` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Truncate table before insert `trainer`
+--
+
+TRUNCATE TABLE `trainer`;
 -- --------------------------------------------------------
 
 --
@@ -54,6 +79,11 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Truncate table before insert `users`
+--
+
+TRUNCATE TABLE `users`;
+--
 -- Indexes for dumped tables
 --
 
@@ -62,6 +92,12 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `employee`
   ADD PRIMARY KEY (`EmployeeID`);
+
+--
+-- Indexes for table `trainer`
+--
+ALTER TABLE `trainer`
+  ADD PRIMARY KEY (`TrainerID`);
 
 --
 -- Indexes for table `users`
