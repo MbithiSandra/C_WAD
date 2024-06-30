@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 30, 2024 at 12:03 PM
+-- Generation Time: Jun 30, 2024 at 01:34 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -53,6 +53,29 @@ INSERT INTO `employee` (`EmployeeID`, `Fullname`, `DateOfBirth`, `JobTitle`, `Em
 (2, 'Mariposa Victor', '1984-05-04', 'Veterinarian', 'Full Time'),
 (3, 'Peter Kimani', '1997-09-13', 'Farm Hand', 'Part Time');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+DROP TABLE IF EXISTS `messages`;
+CREATE TABLE IF NOT EXISTS `messages` (
+  `messageId` int(1) NOT NULL AUTO_INCREMENT,
+  `sender_name` varchar(60) NOT NULL DEFAULT '',
+  `sender_email` varchar(60) NOT NULL DEFAULT '',
+  `subject_line` text DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `dateupdated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`messageId`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Truncate table before insert `messages`
+--
+
+TRUNCATE TABLE `messages`;
 -- --------------------------------------------------------
 
 --
