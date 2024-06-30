@@ -1,4 +1,6 @@
+<?php require_once"includes/db_connect.php";?> 
 <?php include_once"Template/header.php";?> 
+
 
  <!-- header section starts -->
 
