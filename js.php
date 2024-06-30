@@ -23,6 +23,25 @@
  <br>
  <a href="" onclick="return confirm('Are you sure?')">Delete</a>
 
+ <br>
+ <br>
+
+<span onload = "alert('Database has been connected successfully')"></span>
+
+<br>
+ <br>
+<button onclick="window.print()">Print this page</button>
+
+<?php
+    date_default_timezone_set ("Africa/Nairobi");
+    print "Static timer:" .date("H:i:s");
+?>
+
+<br>
+Dynamic time: <span id = "txt"></span>
+
+<script src="js/script.js"></script>
+
 
 </body>
 </html>
