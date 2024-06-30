@@ -57,8 +57,9 @@
         <select name="subject_line" id="sb" required>
             <option value="">---Select Subject-</option>
             <option value="Email Support">Email Support</option>
-            <option value="eLearning Support">eLearning Support</option>
-            <option value="AMS Support">AMS Support</option>
+            <option value="eLearning Support">Farm Help</option>
+            <option value="AMS Support">Product Ordering</option>
+            <option value="AMS Support">Event Planning</option>
         </select>
         <br><br>
     <label for="ms">Message:</label><br>
