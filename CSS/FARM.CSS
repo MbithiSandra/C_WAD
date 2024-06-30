@@ -395,7 +395,11 @@ input[type="checkbox"] {
     box-shadow: 0 0 10px var(--orange);
 }
 
-
+.content{
+    float: left;
+    width: 66%;
+    padding: 15px;
+}
 
 
 
