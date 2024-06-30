@@ -18,10 +18,6 @@
     <body style="background-image: url(Images/background13.jpeg);">
         
         <!-- header section starts -->
-
-
-        
-
 <?php include_once"Template/nav.php";?> 
       
 
