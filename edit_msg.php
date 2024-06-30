@@ -1,7 +1,7 @@
 <?php
     require_once("includes/db_connect.php");
-    include_once("template/header.php");
-    include_once("template/nav.php");
+    include_once("Template/header.php");
+    include_once("Template/nav.php");
 
     $messageId = mysqli_real_escape_string($conn, $_GET["messageId"]);
 
@@ -57,4 +57,4 @@
 </div>
 
         </div>      
-<?php include_once("template/footer.php");?>
+<?php include_once("Template/footer.php");?>

@@ -19,14 +19,14 @@
 
     ?>
 <div class="header">
-    <h1>Messages</h1>
+    <h1></h1>
 </div>
         
-<div class="row">
+
     <div class="content">
 
     <h1>Messages</h1>
-    <p>Lorem ipsum dolor sit amet, laborum</p>
+    <p></p>
     <table>
         <thead>
             <tr>
@@ -76,4 +76,4 @@ if ($sel_msg_res->num_rows > 0) {
 </div>
 
         </div>      
-<?php include_once("Templates/footer.php");?>
+<?php include_once("Template/footer.php");?>

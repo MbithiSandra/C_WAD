@@ -1,12 +1,26 @@
-<?php include_once"Template/header.php";?> 
-    <!-- header section starts -->
+<?php
+  
+  require_once("includes/db_connect.php");
+  include_once("Template/header.php");
+  include_once("Template/nav.php");
 
+    if(isset($_POST["send_message"])){
+        $fullname = mysqli_real_escape_string($conn, $_POST["fullname"]);
+        $email = mysqli_real_escape_string($conn, $_POST["email_address"]);
+        $subject_line = mysqli_real_escape_string($conn, $_POST["subject_line"]);
+        $text_message = mysqli_real_escape_string($conn, $_POST["message"]);
 
-    
-        <!-- header section starts -->
+        $insert_message = "INSERT INTO messages (sender_name, sender_email, subject_line, message) VALUES ('$fullname', '$email', '$subject_line', '$text_message')";
+        
+        if ($conn->query($insert_message) === TRUE) {
+            header("Location: view_messages.php");
+            exit();
+        } else {
+            echo "Error: " . $insert_message . "<br>" . $conn->error;
+        }
+    }
+?>
 
-
-        <?php include_once"Template/nav.php";?> 
         <!--contact info-->
         <div class="box">
             <h2>Contact Info</h2>
