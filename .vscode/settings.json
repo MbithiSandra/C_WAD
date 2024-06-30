@@ -1,0 +1,18 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "C:\\xampp\\htdocs\\C_WAD\\Database\\thefarm.sql",
+            "database": "thefarm",
+            "username": "root",
+            "password": ""
+        }
+    ]
+}
