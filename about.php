@@ -1,8 +1,7 @@
-<?php include_once"Template/header.php";?> 
-        
+<?php require_once"Template/header.php";?> 
         <!-- header section starts -->
 <?php include_once"Template/nav.php";?> 
-      
+       <!-- header sectionends -->
 
         <h1 >ABOUT US</h1>
         <h2>History</h2>
