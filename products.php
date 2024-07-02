@@ -160,6 +160,18 @@
             <section class="form-section">
               <h2>Submit Goods and Services Details</h2>
               <form class="form">
+              <div class="form-group">
+                      <label for="productName">Fullname:</label>
+                      <input type="text" id="productName" name="productName" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="productName">Email Address:</label>
+                      <input type="text" id="productName" name="productName" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="productName">Phone number:</label>
+                      <input type="text" id="productName" name="productName" required>
+                  </div>
                   <div class="form-group">
                       <label for="productName">Product Name:</label>
                       <input type="text" id="productName" name="productName" required>
@@ -169,7 +181,7 @@
                       <input type="number" id="quantity" name="quantity" required>
                   </div>
                   <div class="form-group">
-                      <label for="unitPrice">Unit Price:</label>
+                      <label for="unitPrice">Price:</label>
                       <input type="number" id="unitPrice" name="unitPrice" required>
                   </div>
                   <div class="form-group">

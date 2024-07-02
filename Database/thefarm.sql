@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 30, 2024 at 01:34 PM
+-- Generation Time: Jul 02, 2024 at 08:27 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -61,7 +61,7 @@ INSERT INTO `employee` (`EmployeeID`, `Fullname`, `DateOfBirth`, `JobTitle`, `Em
 
 DROP TABLE IF EXISTS `messages`;
 CREATE TABLE IF NOT EXISTS `messages` (
-  `messageId` int(1) NOT NULL AUTO_INCREMENT,
+  `messageId` int(1) NOT NULL,
   `sender_name` varchar(60) NOT NULL DEFAULT '',
   `sender_email` varchar(60) NOT NULL DEFAULT '',
   `subject_line` text DEFAULT NULL,
@@ -69,13 +69,47 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
   `dateupdated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`messageId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Truncate table before insert `messages`
 --
 
 TRUNCATE TABLE `messages`;
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`messageId`, `sender_name`, `sender_email`, `subject_line`, `message`, `datecreated`, `dateupdated`) VALUES
+(0, 'Sandra Mariposa', 'mariposaSandra@gmail.com', 'AMS Support', 'Help', '2024-07-02 20:43:31', '2024-07-02 20:43:31'),
+(4, 'Sandra Mariposa', 'SandraMariposa@gmail.com', 'Email Support', 'HELP', '2024-06-30 14:57:42', '2024-06-30 14:57:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE IF NOT EXISTS `products` (
+  `productId` int(1) NOT NULL AUTO_INCREMENT,
+  `sender_name` varchar(60) NOT NULL DEFAULT '',
+  `sender_email` varchar(60) NOT NULL DEFAULT '',
+  `phone_number` varchar(60) NOT NULL DEFAULT '',
+  `product_name` varchar(60) NOT NULL DEFAULT '',
+  `quantity` text DEFAULT NULL,
+  `price` text DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `dateupdated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`productId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Truncate table before insert `products`
+--
+
+TRUNCATE TABLE `products`;
 -- --------------------------------------------------------
 
 --

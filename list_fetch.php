@@ -17,7 +17,7 @@
         $sel_stds = "SELECT * FROM students ORDER BY fullname ASC";
     }
 
-$sel_res = ($conn->query($sel_stds));
+$sel_res = $conn->query($sel_stds);
 //for default increment of numbers
 $sn=0;
 
