@@ -159,7 +159,7 @@
 
             <section class="form-section">
               <h2>Submit Goods and Services Details</h2>
-              <form class="form">
+              <form class="form"><?php print htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="contact_form">
               <div class="form-group">
                       <label for="productName">Fullname:</label>
                       <input type="text" id="productName" name="productName" required>
@@ -178,7 +178,7 @@
                   </div>
                   <div class="form-group">
                       <label for="quantity">Quantity:</label>
-                      <input type="number" id="quantity" name="quantity" required>
+                      <input type="text" id="quantity" name="quantity" required>
                   </div>
                   <div class="form-group">
                       <label for="unitPrice">Price:</label>

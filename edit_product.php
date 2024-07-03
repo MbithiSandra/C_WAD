@@ -59,7 +59,7 @@
                   </div>
                   <div class="form-group">
                       <label for="quantity">Quantity:</label>
-                      <input type="number" id="quantity" name="quantity" required>
+                      <input type="text" id="quantity" name="quantity" required>
                   </div>
                   <div class="form-group">
                       <label for="unitPrice">Price:</label>
