@@ -10,6 +10,7 @@
     $spot_prd_row = $spot_prd_res->fetch_assoc();
 
     if(isset($_POST["update_product"])){
+        $productId = mysqli_real_escape_string($conn, $_POST["productId"]);
         $fullname = mysqli_real_escape_string($conn, $_POST["fullname"]);
         $email = mysqli_real_escape_string($conn, $_POST["email_address"]);
         $phone = mysqli_real_escape_string($conn, $_POST["phone_number"]);
@@ -17,7 +18,7 @@
         $quantity = mysqli_real_escape_string($conn, $_POST["quantity"]);
         $price = mysqli_real_escape_string($conn, $_POST["price"]);
         $description = mysqli_real_escape_string($conn, $_POST["description"]);
-        $productId = mysqli_real_escape_string($conn, $_POST["productId"]);
+       
 
         $update_message = "UPDATE products SET sender_name = '$fullname', sender_email = '$email',phone_number = '$phone', 
         product_name = '$productname', quantity = '$quantity', price = '$price', description = '$description'

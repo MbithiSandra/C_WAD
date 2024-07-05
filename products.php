@@ -1,13 +1,32 @@
-<?php include_once"Template/header.php";?> 
-         <!-- header section starts -->
+<?php
+  
+  require_once "includes/db_connect.php";
+  include_once "Template/header.php";
+  include_once "Template/nav.php";
 
-        <!-- header section starts -->
+    if(isset($_POST["send_message"])){
+         $fullname = mysqli_real_escape_string($conn, $_POST["fullname"]);
+        $email = mysqli_real_escape_string($conn, $_POST["email_address"]);
+        $phone = mysqli_real_escape_string($conn, $_POST["phone_number"]);
+        $productname = mysqli_real_escape_string($conn, $_POST["product_name"]);
+        $quantity = mysqli_real_escape_string($conn, $_POST["quantity"]);
+        $price = mysqli_real_escape_string($conn, $_POST["price"]);
+        $description = mysqli_real_escape_string($conn, $_POST["description"]);
+        $productId = mysqli_real_escape_string($conn, $_POST["productId"]);
 
 
-        <?php include_once"Template/nav.php";?> 
-         
-
+        $insert_message = "INSERT INTO products (sender_name, sender_email, phone_number,product_name,
+        quantity, price, description ) VALUES ('$fullname', '$email', '$phone', '$productname', '$quantity',
+        '$price', '$description')";
         
+        if ($conn->query($insert_message) === TRUE) {
+            header("Location: view_order.php");
+            exit();
+        } else {
+            echo "Error: " . $insert_message . "<br>" . $conn->error;
+        }
+    }
+?>
 
             
 
@@ -159,7 +178,8 @@
 
             <section class="form-section">
               <h2>Submit Goods and Services Details</h2>
-              <form class="form"><?php print htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="contact_form">
+              <form action="<?php print htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="contact_form"></form>
+              <form class="form">
               <div class="form-group">
                       <label for="productName">Fullname:</label>
                       <input type="text" id="productName" name="productName" required>

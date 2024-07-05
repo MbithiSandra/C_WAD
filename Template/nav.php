@@ -12,7 +12,7 @@
                   <li><a href="products.php">PRODUCTS</a></li>
                   <li><a href="farmtour.php">FARMTOURS</a></li>
                   <li><a href="contactus.php">CONTACT</a></li>
-                  <li><a href="blog.php">BLOG/NEWS</a></li>
+                  <li><a href="blog.php">BLOG/FAQS</a></li>
                   <li><a href="login.php" >LOGIN</a></li>
               </ul>
           </nav>

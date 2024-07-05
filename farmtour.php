@@ -91,16 +91,9 @@
                 <span>phone :</span>
                 <input type="number" placeholder="enter your number" name="phone">
             </div>
+           
             <div class="inputBox">
-                <span>address :</span>
-                <input type="text" placeholder="enter your address" name="address">
-            </div>
-            <div class="inputBox">
-                <span>location :</span>
-                <input type="text" placeholder="location" name="location">
-            </div>
-            <div class="inputBox">
-                <span>date :</span>
+                <span>date of tour :</span>
                 <input type="date"  name="date">
             </div>
         </div>
@@ -116,6 +109,7 @@
          <input type="radio" id="Advanced" name="level" placeholder="">
 <br><br>
 
+        <label for="Basic">Language spoken:</label>
         <input type="checkbox" id="Swahili" value="Swahili" name="Swahili">
         <label for="Swahili">Swahili</label><br>
         <input type="checkbox" id="English" value="English" name="English">
