@@ -401,7 +401,14 @@ input[type="checkbox"] {
     padding: 15px;
 }
 
-.home .slide {
+
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+}
+.home .swiper-home-slider {
     text-align: center;
     padding: 2rem;
     display: flex;
@@ -412,7 +419,7 @@ input[type="checkbox"] {
     min-height: 60rem;
 }
 
-.home .slide .content {
+.home .swiper-home-slider .swiper-wrapper .swiper-slide .content {
     width: 85rem;
     display: none;
 }
