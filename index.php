@@ -1,4 +1,4 @@
-<?php include_once"Template/header.php";?> 
+<?php include_once "Template/header.php";?> 
     <!-- header section starts -->
 
 
@@ -7,34 +7,34 @@
     <section class="home">
     <div class="swiper home-slider">
         <div class="swiper-wrapper">
-
-            <div class="swiper-slide slide" style="background:url(Images/pexels-gnist-706498.jpg) no-repeat">
+            <div class="swiper-slide slide" style="background:url('Images/pexels-gnist-706498.jpg') no-repeat">
+            <img class="fixed-size" src="Images/farm1.jpg" alt="Farm Tours">
                 <div class="content">
                     <span>Growing Goodness</span>
                     <h3>One Seed at a Time</h3>
                     <a href="products.php" class="btn">Discover More</a>
                 </div>
             </div>
-            <div class="swiper-slide slide" style="background:url(Images/pexels-gnist-706498.jpg) no-repeat">
+            <div class="swiper-slide slide" style="background:url('Images/pexels-gnist-706498.jpg') no-repeat">
                 <div class="content">
-                    <span>Rooted in Tradition </span>
+                    <span>Rooted in Tradition</span>
                     <h3>Growing for the Future</h3>
                     <a href="products.php" class="btn">Discover More</a>
                 </div>
             </div>
-            <div class="swiper-slide slide" style="background:url(Images/pexels-gnist-706498.jpg) no-repeat">
+            <div class="swiper-slide slide" style="background:url('Images/pexels-gnist-706498.jpg') no-repeat">
                 <div class="content">
                     <span>Your Local Farm Adventure</span>
                     <h3>Experience the Farm Life</h3>
                     <a href="products.php" class="btn">Discover More</a>
                 </div>
             </div>
-
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
 </section>
+
     
 
     <h2>WELCOME</h2>
