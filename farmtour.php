@@ -24,50 +24,38 @@ if (isset($_POST['send'])) {
 ?>
 
 
-<!-- header section starts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        function refreshSchedule() {
+            $.ajax({
+                url: 'get_schedule.php',
+                type: 'GET',
+                success: function(response) {
+                    $('#schedule_table').html(response);
+                }
+            });
+        }
+
+        // Initial load of schedule on page load
+        refreshSchedule();
+
+        // Refresh schedule every 10 seconds
+        setInterval(refreshSchedule, 10000); // 10 seconds interval
+    });
+</script>
+
 <?php include_once "Template/nav.php"; ?>
 
 <h2>Information about the farm tours</h2>
 <p>The farm organizes farm tours and trainings for farmers and potential customers. It also hosts seminars and workshops for different companies.</p>
 
 <h2>Schedule and Pricing</h2>
-<table>
-    <tr>
-        <th>Guest Name</th>
-        <th>Guide/Trainer Name</th>
-        <th>Time In</th>
-        <th>Time Out</th>
-        <th>Total Price</th>
-    </tr>
-    <tr>
-        <td>Sharon Njeru</td>
-        <td>Maureen Mueni</td>
-        <td>8:00am</td>
-        <td>11:00am</td>
-        <td>3000 Ksh</td>
-    </tr>
-    <tr>
-        <td>Crystal Marie</td>
-        <td>Cyrus Ochieng'</td>
-        <td>4:00pm</td>
-        <td>7:00pm</td>
-        <td>4000 Ksh</td>
-    </tr>
-    <tr>
-        <td>Allan Maxwell</td>
-        <td>Sabrina Elavuna</td>
-        <td>12:00pm</td>
-        <td>4:00pm</td>
-        <td>5000 Ksh</td>
-    </tr>
-    <tr>
-        <td>Jake Kalix</td>
-        <td>Luna Devi</td>
-        <td>9:00am</td>
-        <td>12:00pm</td>
-        <td>3000 Ksh</td>
-    </tr>
-</table>
+    <div class="table-responsive">
+        <table id="schedule_table" class="table table-striped table-bordered">
+            <!-- Schedule will be loaded dynamically here -->
+        </table>
+    </div>
 
 <section class="home-about">
     <div class="image">
@@ -78,7 +66,6 @@ if (isset($_POST['send'])) {
     </div>
 
     <h2>Booking Form</h2>
-    <!-- booking section starts -->
     <section class="booking">
         <h2 class="heading-title">Book Now</h2>
 
@@ -166,4 +153,3 @@ if (isset($_POST['send'])) {
 </section>
 
 <?php include_once "Template/footer.php"; ?>       
-
