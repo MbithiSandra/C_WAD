@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
                        VALUES ('$name', '$email', '$phone', '$event_date', '$event_type', NOW())";
 
     if ($conn->query($insert_booking) === TRUE) {
-        header("Location: view_event_bookings.php");
+        header("Location: view_events.php");
         exit();
     } else {
         echo "Error: " . $insert_booking . "<br>" . $conn->error;
@@ -48,9 +48,9 @@ if (isset($_POST['submit'])) {
             <span>Event Type:</span>
             <select name="event_type" required>
                 <option value="">Select an event type</option>
-                <option value="wedding">Wedding</option>
-                <option value="graduation party">Graduation Party</option>
-                <option value="birthday party">Birthday Party</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Graduation party">Graduation Party</option>
+                <option value="Birthday party">Birthday Party</option>
                 <option value="team building">Team Building</option>
                 <option value="wine tasting">Wine Tasting</option>
                 <option value="other">Other</option>

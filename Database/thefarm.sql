@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2024 at 07:35 PM
+-- Generation Time: Jul 06, 2024 at 08:29 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `event_bookings` (
   `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
   `dateupdated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`bookingId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Truncate table before insert `event_bookings`
@@ -183,9 +183,13 @@ DROP TABLE IF EXISTS `trainer`;
 CREATE TABLE IF NOT EXISTS `trainer` (
   `TrainerID` varchar(11) NOT NULL,
   `TrainerName` varchar(50) NOT NULL,
-  `Specialization` varchar(50) NOT NULL,
-  `YearsOfExperience` int(50) NOT NULL,
-  `EmploymentStatus` varchar(50) NOT NULL,
+  `Trainer_phone` varchar(50) NOT NULL,
+  `Trainee_name` varchar(100) NOT NULL,
+  `Trainee_phone` varchar(50) NOT NULL,
+  `Time_in` time NOT NULL,
+  `Time_out` time NOT NULL,
+  `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `dateupdated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`TrainerID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
