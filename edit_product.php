@@ -20,7 +20,7 @@
         $description = mysqli_real_escape_string($conn, $_POST["description"]);
        
 
-        $update_message = "UPDATE products SET sender_name = '$fullname', sender_email = '$email',phone_number = '$phone', 
+        $update_product = "UPDATE products SET sender_name = '$fullname', sender_email = '$email',phone_number = '$phone', 
         product_name = '$productname', quantity = '$quantity', price = '$price', description = '$description'
          WHERE productId='$productId' LIMIT 1";
       

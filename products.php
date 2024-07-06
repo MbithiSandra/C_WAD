@@ -1,32 +1,31 @@
 <?php
-  
-  require_once "includes/db_connect.php";
-  include_once "Template/header.php";
-  include_once "Template/nav.php";
+require_once "includes/db_connect.php";
+include_once "Template/header.php";
+include_once "Template/nav.php";
 
-    if(isset($_POST["send_message"])){
-         $fullname = mysqli_real_escape_string($conn, $_POST["fullname"]);
-        $email = mysqli_real_escape_string($conn, $_POST["email_address"]);
-        $phone = mysqli_real_escape_string($conn, $_POST["phone_number"]);
-        $productname = mysqli_real_escape_string($conn, $_POST["product_name"]);
-        $quantity = mysqli_real_escape_string($conn, $_POST["quantity"]);
-        $price = mysqli_real_escape_string($conn, $_POST["price"]);
-        $description = mysqli_real_escape_string($conn, $_POST["description"]);
-        $productId = mysqli_real_escape_string($conn, $_POST["productId"]);
+if (isset($_POST["send_message"])) {
+    $fullname = mysqli_real_escape_string($conn, $_POST["fullname"]);
+    $email = mysqli_real_escape_string($conn, $_POST["email_address"]);
+    $phone = mysqli_real_escape_string($conn, $_POST["phone_number"]);
+    $productname = mysqli_real_escape_string($conn, $_POST["product_name"]);
+    $quantity = mysqli_real_escape_string($conn, $_POST["quantity"]);
+    $price = mysqli_real_escape_string($conn, $_POST["price"]);
+    $description = mysqli_real_escape_string($conn, $_POST["description"]);
 
+    // Corrected SQL query for inserting product data
+    $insert_product = "INSERT INTO products (sender_name, sender_email, phone_number, product_name, quantity, price, description) 
+                       VALUES ('$fullname', '$email', '$phone', '$productname', '$quantity', '$price', '$description')";
 
-        $insert_message = "INSERT INTO products (sender_name, sender_email, phone_number,product_name,
-        quantity, price, description ) VALUES ('$fullname', '$email', '$phone', '$productname', '$quantity',
-        '$price', '$description')";
-        
-        if ($conn->query($insert_message) === TRUE) {
-            header("Location: view_order.php");
-            exit();
-        } else {
-            echo "Error: " . $insert_message . "<br>" . $conn->error;
-        }
+    if ($conn->query($insert_product) === TRUE) {
+        header("Location: view_order.php");
+        exit();
+    } else {
+        echo "Error: " . $insert_product . "<br>" . $conn->error;
     }
+}
 ?>
+
+
 
             
 

@@ -14,7 +14,7 @@
 }
 
 .footer{
-    background: url(C:\xampp\htdocs\C_WAD\Images\background2.jpg) no-repeat;
+    background-image: url("/Images/background13.jpeg") no-repeat;
     background-size: cover;
     background-position: center;
 }
