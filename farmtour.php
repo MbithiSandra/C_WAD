@@ -99,32 +99,61 @@
         </div>
 
         
-        <label for="Basic">Basic knowledge</label>
-         <input type="radio" id="Basic" name="level" placeholder="">
-
-         <label for="Intermediate">Intermediate knowledge</label>
-         <input type="radio" id="Intermediate" name="level" placeholder="">
-
-        <label for="Advanced">Advanced knowledge</label>
-         <input type="radio" id="Advanced" name="level" placeholder="">
+        <label for="knowledge">knowledge level of farming:</label>
+        <div>
+    <label for="Basic">Basic knowledge</label>
+    <input type="radio" id="Basic" name="level" placeholder="">
+</div>
+        <div>
+    <label for="Intermediate">Intermediate knowledge</label>
+    <input type="radio" id="Intermediate" name="level" placeholder="">
+</div>
+        <div>
+    <label for="Advanced">Advanced knowledge</label>
+    <input type="radio" id="Advanced" name="level" placeholder="">
+</div>
 <br><br>
-
         <label for="Basic">Language spoken:</label>
-        <input type="checkbox" id="Swahili" value="Swahili" name="Swahili">
-        <label for="Swahili">Swahili</label><br>
-        <input type="checkbox" id="English" value="English" name="English">
+        <div>
+    <label for="Swahili">Swahili</label><br>
+    <input type="radio" id="Swahili" name="Swahili" placeholder="">
+</div>
+        <div>
         <label for="English">English</label><br>
-        <input type="checkbox" id="Spanish" value="Spanish" name="Spanish">
-        <label for="Spanish">Spanish</label><br>
-        <input type="checkbox" id="Japanese" value="Japanese" name="Japanese">
-        <label for="Japanese">Japanese</label><br>
+        <input type="radio" id="English" name="English" placeholder="">
+        </div>
 
+        <div>
+        <label for="Spanish">Spanish</label><br>
+        <input type="radio" id="Spanish" name="Spanish" placeholder="">
+        </div>
+
+        <div>
+        <label for="Japanese">Japanese</label><br>
+        <input type="radio" id="Japanese" name="Japanese" placeholder="">
+        </div>
+        <br><br>
         <select name="" id="">
             <option value="">---Select Gender-</option>
             <option value="1">Female</option>
             <option value="2">Male</option>
             <option value="3">Rather not say</option>
         </select>
+
+        <button id="clearChoice">Clear my choice</button>
+
+<script>
+    document.getElementById('clearChoice').addEventListener('click', function() {
+        // Get all radio buttons with name="level"
+        var radios = document.getElementsByName('level');
+        
+        // Loop through radios and clear checked status
+        for (var i = 0; i < radios.length; i++) {
+            radios[i].checked = false;
+        }
+    });
+</script>
+
 
         <input type="submit" value="submit" class="btn" name="send">
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2024 at 08:27 PM
+-- Generation Time: Jul 06, 2024 at 05:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -56,6 +56,32 @@ INSERT INTO `employee` (`EmployeeID`, `Fullname`, `DateOfBirth`, `JobTitle`, `Em
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `farmtours`
+--
+
+DROP TABLE IF EXISTS `farmtours`;
+CREATE TABLE IF NOT EXISTS `farmtours` (
+  `farmtourId` int(1) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `email` varchar(100) NOT NULL DEFAULT '',
+  `phone` varchar(20) NOT NULL,
+  `date_of_tour` date NOT NULL,
+  `knowledge_level` enum('Basic','Intermediate','Advanced') DEFAULT NULL,
+  `language_spoken` enum('Swahili','English','Spanish','Japanese') DEFAULT NULL,
+  `gender` enum('Female','Male','Rather not say') DEFAULT NULL,
+  `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `dateupdated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`farmtourId`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Truncate table before insert `farmtours`
+--
+
+TRUNCATE TABLE `farmtours`;
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `messages`
 --
 
@@ -81,8 +107,7 @@ TRUNCATE TABLE `messages`;
 --
 
 INSERT INTO `messages` (`messageId`, `sender_name`, `sender_email`, `subject_line`, `message`, `datecreated`, `dateupdated`) VALUES
-(0, 'Sandra Mariposa', 'mariposaSandra@gmail.com', 'AMS Support', 'Help', '2024-07-02 20:43:31', '2024-07-02 20:43:31'),
-(4, 'Sandra Mariposa', 'SandraMariposa@gmail.com', 'Email Support', 'HELP', '2024-06-30 14:57:42', '2024-06-30 14:57:42');
+(0, 'Peter ', 'Peter123@gmail.com', 'AMS Support', 'PLEASE', '2024-07-06 12:15:31', '2024-07-06 12:15:31');
 
 -- --------------------------------------------------------
 
@@ -103,13 +128,20 @@ CREATE TABLE IF NOT EXISTS `products` (
   `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
   `dateupdated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`productId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Truncate table before insert `products`
 --
 
 TRUNCATE TABLE `products`;
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`productId`, `sender_name`, `sender_email`, `phone_number`, `product_name`, `quantity`, `price`, `description`, `datecreated`, `dateupdated`) VALUES
+(2, 'Sandra Mariposa', 'SandraMariposa@gmail.com', '0730504050', 'Chicken', '500g', '400', 'Whole', '2024-07-06 18:00:42', '2024-07-06 18:00:42');
+
 -- --------------------------------------------------------
 
 --
@@ -147,13 +179,20 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`UserID`),
   UNIQUE KEY `Email` (`Email`),
   UNIQUE KEY `Username` (`Username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Truncate table before insert `users`
 --
 
-TRUNCATE TABLE `users`;COMMIT;
+TRUNCATE TABLE `users`;
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`UserID`, `Fullname`, `Email`, `Username`, `Password`) VALUES
+(1, 'Clara Hamilton', 'clarahamilton@gmail.com', 'clara', '$2y$10$3GittQCG./HmcN4.QSWSOu9duALrrKCswuBt0uId1wz');
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
