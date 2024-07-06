@@ -6,7 +6,7 @@
             <h3>quick links</h3>
             <a href="index.php"> <i class="fas fa-angle-right"></i>HOME</a>
             <a href="about.php"> <i class="fas fa-angle-right"></i>ABOUT</a>
-            <a href="animals.php"><i class="fas fa-angle-right"></i>ANIMALS</a>
+            <a href="events.php"><i class="fas fa-angle-right"></i>EVENTS</a>
             <a href="products.php"><i class="fas fa-angle-right"></i>PRODUCTS</a>
             <a href="farmtour.php"><i class="fas fa-angle-right"></i>FARMTOURS</a>
             <a href="contactus.php"><i class="fas fa-angle-right"></i>CONTACT</a>

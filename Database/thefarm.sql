@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2024 at 05:46 PM
+-- Generation Time: Jul 06, 2024 at 07:35 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -56,6 +56,30 @@ INSERT INTO `employee` (`EmployeeID`, `Fullname`, `DateOfBirth`, `JobTitle`, `Em
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `event_bookings`
+--
+
+DROP TABLE IF EXISTS `event_bookings`;
+CREATE TABLE IF NOT EXISTS `event_bookings` (
+  `bookingId` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `email` varchar(100) NOT NULL DEFAULT '',
+  `phone` varchar(20) NOT NULL,
+  `event_date` date NOT NULL,
+  `event_type` enum('Wedding','Graduation party','Birthday party','team building','wine tasting','other') DEFAULT NULL,
+  `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `dateupdated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`bookingId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Truncate table before insert `event_bookings`
+--
+
+TRUNCATE TABLE `event_bookings`;
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `farmtours`
 --
 
@@ -72,13 +96,20 @@ CREATE TABLE IF NOT EXISTS `farmtours` (
   `datecreated` datetime NOT NULL DEFAULT current_timestamp(),
   `dateupdated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`farmtourId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Truncate table before insert `farmtours`
 --
 
 TRUNCATE TABLE `farmtours`;
+--
+-- Dumping data for table `farmtours`
+--
+
+INSERT INTO `farmtours` (`farmtourId`, `name`, `email`, `phone`, `date_of_tour`, `knowledge_level`, `language_spoken`, `gender`, `datecreated`, `dateupdated`) VALUES
+(7, 'Sandra Mariposa', 'SandraMariposa@gmail.com', '0730504050', '2024-07-20', 'Advanced', 'Japanese', 'Male', '2024-07-06 19:58:58', '2024-07-06 19:58:58');
+
 -- --------------------------------------------------------
 
 --

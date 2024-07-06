@@ -49,7 +49,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                     </div>
                 </div>
-                <div class="load-more"><a href="animals.php" class="btn">Load More</a></div>
+                <div class="load-more"><a href="events.php" class="btn">Load More</a></div>
             </div>
         </div>
     </section>
