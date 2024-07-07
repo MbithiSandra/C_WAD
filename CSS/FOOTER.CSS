@@ -17,6 +17,10 @@
     background-image: url("/Images/background13.jpeg") no-repeat;
     background-size: cover;
     background-position: center;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
 }
 .footer .box-container{
     display: grid;

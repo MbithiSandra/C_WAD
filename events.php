@@ -22,9 +22,72 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<div class="header">
-    <h1>Book an Event</h1>
+<div class="heading" style="background:url(Images/about2.jpg) no-repeat;">
+    <h1>Events</h1>
 </div>
+
+
+         <section class="home-projects">
+        <h1 class="Heading-title"></h1>
+        <div class="container-fluid text-center bg-grey">
+            <h4>What we offer:</h4>
+            <div class="row text-center">
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img class="fixed-size" src="Images/event.jpg" alt="Farm Tours">
+                        <p><strong>Graduation Parties</strong></p>
+                        <p>Celebrate your education success with us</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img class="fixed-size" src="Images/event3.jpg" alt="Farming Tips">
+                        <p><strong>Weddings</strong></p>
+                        <p>Say 'I Do' to Perfection</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img class="fixed-size" src="Images/events1.jpg" alt="Animals Kept">
+                        <p><strong>Birthday Parties</strong></p>
+                        <p>Blow out your candles in style</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img class="fixed-size" src="Images/event4.jpg" alt="Products">
+                        <p><strong>Team buildings</strong></p>
+                        <p>Foster team spirit</p>
+                    </div>
+                </div>
+                <div class="load-more"><a href="products.php" class="btn">Load More</a></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+
+            <div class="content">
+                <h3>Why choose us?</h3>
+                <p></p>
+                   <div class="icons-container">
+                    <div class="icons">
+                        <i class="fas fa-map"></i>
+                        <span>Anywhere</span>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span>Affordable prices</span>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-tractor"></i>
+                        <span>Reliable services</span>
+                    </div>
+                   </div>
+    
+                   
+
+        </section>
 
 <div class="content">
     <form method="post" class="booking-form">
