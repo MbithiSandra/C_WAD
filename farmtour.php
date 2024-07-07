@@ -26,24 +26,24 @@ if (isset($_POST['send'])) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    $(document).ready(function() {
-        function refreshSchedule() {
-            $.ajax({
-                url: 'get_schedule.php',
-                type: 'GET',
-                success: function(response) {
-                    $('#schedule_table').html(response);
-                }
+        $(document).ready(function() {
+            function refreshSchedule() {
+                $.ajax({
+                    url: 'get_schedule.php',
+                    type: 'GET',
+                    success: function(response) {
+                        $('#schedule_table').html(response);
+                    }
+                });
+            }
+
+            // Load schedule only when the button is clicked
+            $('#load_schedule_btn').click(function() {
+                refreshSchedule();
             });
-        }
-
-        // Initial load of schedule on page load
-        refreshSchedule();
-
-        // Refresh schedule every 10 seconds
-        setInterval(refreshSchedule, 10000); // 10 seconds interval
-    });
-</script>
+        });
+    </script>
+   
 
 <?php include_once "Template/nav.php"; ?>
 
@@ -51,11 +51,13 @@ if (isset($_POST['send'])) {
 <p>The farm organizes farm tours and trainings for farmers and potential customers. It also hosts seminars and workshops for different companies.</p>
 
 <h2>Schedule and Pricing</h2>
-    <div class="table-responsive">
+<button id="load_schedule_btn">Load Training Schedule</button>
+<div class="table-responsive">
         <table id="schedule_table" class="table table-striped table-bordered">
             <!-- Schedule will be loaded dynamically here -->
         </table>
     </div>
+    
 
 <section class="home-about">
     <div class="image">

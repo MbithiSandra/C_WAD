@@ -32,10 +32,14 @@ h2{
     text-transform: uppercase;
     text-decoration: underline;
 }
+h5{
+    font-size: 14;
+}
 
 p{
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
+    color: black;
     line-height: 25px;
 }
 
@@ -70,7 +74,7 @@ ol{
     display: inline-block;
     background: var(--russet);
     margin-top: 1rem;
-    color: var(--whitE);
+    color: black;
     font-size: 1.7rem;
     padding: 1rem 3rem;
     cursor: pointer;
@@ -78,65 +82,122 @@ ol{
 .btn:hover{
     background: var(--laurelgreen);
 }
-.home-projects{
+
+.home-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Add some padding for spacing */
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Add margin to prevent collision with next section */
+}
+
+.home-about .image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 20px; /* Add some margin to space it from the content */
+}
+
+.home-about .content {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ccc; /* Add border to the content */
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for better visual effect */
+    background: var(--light-bg);
+    max-width: 800px; /* Optional: Add a max-width to control the content width */
+}
+
+.home-about .content h3 {
+    font-size: 2rem;
+    color: #8C4646;
+}
+
+.home-about .content p {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 1;
+    color: #592828;
+}
+.home-about .btn{
+    display: inline-block;
+    background: var(--russet);
+    margin-top: 1rem;
+    color: #D9B8B8;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+}
+.home-about .btn:hover{
+    background: #1f302b;
+}
+
+
+.home-projects {
     background-image: url(C:\xampp\htdocs\C_WAD\Images\background8.jpg);
 }
-.home-projects .Heading-title{
-    text-align: left ;
-    color: rgba(9, 161, 34, 0.856); 
+
+.home-projects .Heading-title {
+    text-align: left;
+    color: rgba(9, 161, 34, 0.856);
     text-transform: uppercase;
     text-decoration: underline;
 }
-.home-projects .box-container{
+
+.home-projects .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem 1 fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1rem;
 }
-.home-projects .box-container .box{
+
+.home-projects .box-container .box {
     border: var(--border);
     box-shadow: var(--box-shadow);
-    background: var(--white);
-   
+    background: black;
 }
-.home-projects .box-container  .image{
+
+.home-projects .box-container .image {
     height: 50rem;
     overflow: hidden;
 }
-.home-projects .box-container .image img{
+
+.home-projects .box-container .image img {
     height: 80%;
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
     transition: .2s linear;
 }
-.home-projects .box-container .box .content{
+
+.home-projects .box-container .box .content {
     padding: 1rem;
     text-align: center;
 }
-.home-projects .box-container .box .content h3{
+
+.home-projects .box-container .box .content h3 {
     font-size: 1.8rem;
     color: #783D19;
 }
-.home-projects .load-more{
-    text-align: center;
-    margin-top: 2rem;
-}
-.home-projects .box-container .box .content h3 p{
+
+.home-projects .box-container .box .content p {
     font-size: 1.5rem;
-    color:#a9f0d2;
+    color: #a9f0d2;
     line-height: 2;
     text-align: center;
     padding: 1rem 0;
 }
-.home-projects .load-more{
+
+.home-projects .load-more {
     text-align: center;
     margin-top: 2rem;
 }
+
 .fixed-size {
-    width: 100%;  
-    height: auto;  
-    max-height: 300px;  
-    object-fit: cover;  
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
 }
+
 
 
 
@@ -159,7 +220,7 @@ ol{
     display: inline-block;
     background: var(--black);
     margin-top: 1rem;
-    color: var(--white);
+    color: black;
     font-size: 1.7rem;
     padding: 1rem 3rem;
     cursor: pointer;
@@ -198,7 +259,7 @@ nav {
 }
 
 .logo {
-    font-size: 27px;
+    font-size: 55px;
     font-weight: bold;  
     color: white;
     text-shadow: 0 0 5px rgba(255, 165, 0, 0.8),

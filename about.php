@@ -15,13 +15,17 @@
 <p>At Kyase Ranch, our mission is to cultivate a sustainable and harmonious relationship between people, animals, and the land. We are committed to ethical farming practices, integrating technology, and engaging with the community.</p>
 
 <section class="home-about">
-    <div class="image">
+<div class="image">
         <video width="1200" height="400" autoplay muted controls loop>
             <source src="http://localhost/C_WAD/Images/mixkit-small-farmer-town-in-the-countryside-32466-medium.mp4">
             <source src="C:/Users/mbith/OneDrive/Desktop/Construction project/images/about-vid.ogg" type="video/ogg">
         </video>
     </div>
     <h1>Our Employees</h1>
+    <button id="load_employees_btn">Load Employees</button>
+    <div id="employee_table">
+        <!-- Employee table will be loaded here -->
+    </div>
     <div id="employee_table">
         <!-- Employee table will be loaded dynamically here -->
     </div>
@@ -43,23 +47,23 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    $(document).ready(function() {
-        function refreshEmployees() {
-            $.ajax({
-                url: 'get_employees.php',
-                type: 'GET',
-                success: function(response) {
-                    $('#employee_table').html(response);
-                }
+        $(document).ready(function() {
+            function refreshEmployees() {
+                $.ajax({
+                    url: 'get_employees.php',
+                    type: 'GET',
+                    success: function(response) {
+                        $('#employee_table').html(response);
+                    }
+                });
+            }
+
+            // Load employees only when the button is clicked
+            $('#load_employees_btn').click(function() {
+                refreshEmployees();
             });
-        }
-
-        // Initial load of employees on page load
-        refreshEmployees();
-
-        // Refresh employees every 30 seconds
-        setInterval(refreshEmployees, 30000); // 30 seconds interval
-    });
-</script>
+        });
+    </script>
+   
 
 <?php include_once "Template/footer.php"; ?>
