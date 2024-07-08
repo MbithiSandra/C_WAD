@@ -34,14 +34,22 @@ if (isset($_POST['submit'])) {
             <div class="row text-center">
                 <div class="col-sm-6">
                     <div class="thumbnail">
-                        <img class="fixed-size" src="Images/event.jpg" alt="Farm Tours">
+                    <video autoplay muted loop class="d-block w-100">
+        <source src="Images/graduation.mp4" type="video/mp4">
+        <source src="Images/about-vid.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
                         <p><strong>Graduation Parties</strong></p>
                         <p>Celebrate your education success with us</p>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="thumbnail">
-                        <img class="fixed-size" src="Images/event3.jpg" alt="Farming Tips">
+                    <video autoplay muted loop class="d-block w-100">
+        <source src="Images/slider7.mp4" type="video/mp4">
+        <source src="Images/about-vid.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
                         <p><strong>Weddings</strong></p>
                         <p>Say 'I Do' to Perfection</p>
                     </div>

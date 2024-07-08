@@ -13,23 +13,12 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
+        
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="Images/slider2.jpg" class="d-block w-100" style="width:600px; height:470px;" alt="photo1">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Fresh, Fun, and Farm-Tastic!</h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="Images/slider3.jpg" class="d-block w-100" style="width:600px; height:470px;" alt="photo2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Cultivating Joy, One Crop at a Time</h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="Images/slider4.jpg" class="d-block w-100" style="width:600px; height:470px;" alt="photo3">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Bringing the Farm to Your Table</h5>
                 </div>
             </div>
             <div class="carousel-item">
@@ -42,6 +31,39 @@
         <h5>Experience the Farm Life</h5>
     </div>
 </div>
+<div class="carousel-item">
+    <video autoplay muted loop class="d-block w-100">
+        <source src="Images/slider6.mp4" type="video/mp4">
+        <source src="Images/about-vid.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+    <div class="carousel-caption d-none d-md-block">
+        <h5>Experience the Farm Life</h5>
+    </div>
+</div>
+<div class="carousel-item">
+    <video autoplay muted loop class="d-block w-100">
+        <source src="Images/slider7.mp4" type="video/mp4">
+        <source src="Images/about-vid.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+    <div class="carousel-caption d-none d-md-block">
+        <h5>Enjoy your happy moments with us</h5>
+    </div>
+</div>
+            <div class="carousel-item">
+                <img src="Images/slider3.jpg" class="d-block w-100" style="width:600px; height:470px;" alt="photo2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Cultivating Joy, One Crop at a Time</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/slider4.jpg" class="d-block w-100" style="width:600px; height:470px;" alt="photo3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Bringing the Farm to Your Table</h5>
+                </div>
+            </div>
+           
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
