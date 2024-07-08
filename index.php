@@ -36,7 +36,7 @@
     <video autoplay muted loop class="d-block w-100">
         <source src="Images/slider1.mp4" type="video/mp4">
         <source src="Images/about-vid.ogg" type="video/ogg">
-        Your browser does not support the video tag.
+        Your browser does not support the video given.
     </video>
     <div class="carousel-caption d-none d-md-block">
         <h5>Experience the Farm Life</h5>
