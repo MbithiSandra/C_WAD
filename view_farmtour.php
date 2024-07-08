@@ -17,9 +17,6 @@ if(isset($_GET["DelId"])){
 }
 ?>
 
-<div class="header">
-    <h1>Farm Tours</h1>
-</div>
 
 <div class="content">
     <h1>Farm Tours List</h1>

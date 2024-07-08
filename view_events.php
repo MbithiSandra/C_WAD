@@ -17,9 +17,7 @@ if (isset($_GET["DelId"])) {
 }
 ?>
 
-<div class="header">
-    <h1>Events</h1>
-</div>
+
 
 <div class="content">
     <h1>Events List</h1>

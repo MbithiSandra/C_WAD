@@ -4,8 +4,9 @@
 
     <?php include_once "Template/nav.php";?> 
 
+ 
 
-    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -32,12 +33,15 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="Images/slider5.jpg" class="d-block w-100" style="width:600px; height:470px;" alt="photo4">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Experience the Farm Life</h5>
-                </div>
-            </div>
-        </div>
+    <video autoplay muted loop class="d-block w-100">
+        <source src="Images/slider1.mp4" type="video/mp4">
+        <source src="Images/about-vid.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+    <div class="carousel-caption d-none d-md-block">
+        <h5>Experience the Farm Life</h5>
+    </div>
+</div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>

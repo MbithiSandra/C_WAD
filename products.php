@@ -5,6 +5,7 @@ require_once "includes/db_connect.php";
 include_once "Template/header.php";
 include_once "Template/nav.php";
 
+
 if (isset($_POST["send_product"])) {
     $fullname = mysqli_real_escape_string($conn, $_POST["fullname"]);
     $email = mysqli_real_escape_string($conn, $_POST["email_address"]);
@@ -26,6 +27,10 @@ if (isset($_POST["send_product"])) {
 }
 ?>
 
+<div class="heading" style="background:url(Images/flower2.jpg) no-repeat;">
+    <h1>PRODUCTS</h1>
+</div>
+
  <!-- home section starts -->
         
 
@@ -39,60 +44,52 @@ if (isset($_POST["send_product"])) {
                         <div class="thumbnail">
                           <img class="fixed-size" src="Images/beef1.jpeg" alt="Paris">
                           <p><strong>Beef</strong></p>
-                          <p>Amazing tender soft beef </p>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="thumbnail">
                           <img class="fixed-size" src="Images/mutton1.jpeg" alt="New York">
                           <p><strong>Mutton</strong></p>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="thumbnail">
                           <img class="fixed-size" src="Images/wool1.jpeg" alt="San Francisco">
                           <p><strong>Sheep wool</strong></p>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="thumbnail">
                           <img class="fixed-size" src="Images/chickenmeat1.jpeg" alt="New York">
                           <p><strong>Chicken</strong></p>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="thumbnail">
                           <img class="fixed-size" src="Images/honey1.jpeg" alt="New York">
                           <p><strong>Honey</strong></p>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="thumbnail">
                           <img class="fixed-size" src="Images/milk1.jpeg" alt="New York">
                           <p><strong>Milk</strong></p>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="thumbnail">
                           <img class="fixed-size" src="Images/chickenmeat.jpeg" alt="New York">
                           <p><strong>Sausages</strong></p>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="thumbnail">
                           <img class="fixed-size" src="Images/fertilizer1 (1).jpeg" alt="New York">
                           <p><strong>Manure</strong></p>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
                         </div>
                       </div>
                       </div>
-                      <div class="load-more"><a href="animals.html" class="btn">Load More</a></div>
+                      <div class="load-more"><a href="products.php" class="btn">Load More</a></div>
                  
             </section>
                
@@ -171,10 +168,6 @@ if (isset($_POST["send_product"])) {
                    
                 </tr>
             </table>
-
-<div class="header">
-    <h1>Order Form</h1>
-</div>
 
 <div class="content">
     <h1>Place an Order</h1>

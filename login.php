@@ -1,3 +1,58 @@
+<?php
+require_once "includes/db_connect.php";
+
+// Handle sign-up form submission
+if (isset($_POST['sign_up'])) {
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+
+    // Example SQL query to insert user data into the database
+    $sql = "INSERT INTO users (fullname, email, username, password) VALUES (?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssss", $fullname, $email, $username, $hashed_password);
+    
+    if ($stmt->execute()) {
+        // Redirect to a success page or do something else
+        header("Location: login.php");
+        exit();
+    } else {
+        // Handle errors, e.g., display an error message
+        echo "Error: " . $conn->error;
+    }
+}
+
+// Handle sign-in form submission
+if (isset($_POST['sign_in'])) {
+    $signin_email = $_POST['signin_email'];
+    $signin_password = $_POST['signin_password'];
+
+    // Example SQL query to fetch user data for sign-in verification
+    $sql = "SELECT * FROM users WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $signin_email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    if ($result->num_rows == 1) {
+        $user = $result->fetch_assoc();
+        if (password_verify($signin_password, $user['password'])) {
+            // Redirect to dashboard or authenticated page
+            header("Location: index.php");
+            exit();
+        } else {
+            // Incorrect password handling
+            header("Location: index.php");
+        }
+    } else {
+        // User not found handling
+        echo "User not found";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +64,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css stylesheet -->
     <link rel="stylesheet" href="CSS/style.css">
+    <!-- JavaScript for form switching -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const signUpButton = document.getElementById('signUp');
+            const signInButton = document.getElementById('signIn');
+            const container = document.getElementById('container');
+
+            signUpButton.addEventListener('click', function () {
+                container.classList.add('right-panel-active');
+            });
+
+            signInButton.addEventListener('click', function () {
+                container.classList.remove('right-panel-active');
+            });
+        });
+    </script>
 </head>
 <body>
 

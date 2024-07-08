@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<div class="heading" style="background:url(Images/about2.jpg) no-repeat;">
+<div class="heading" style="background:url(Images/flower.jpg) no-repeat;">
     <h1>Events</h1>
 </div>
 

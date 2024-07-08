@@ -1,61 +1,88 @@
-:root{
+:root {
     --main-color: #2ac879e5;
-    --black:#222;
-    --white: #fff ;
-    --light-black:#777;
-    --light-white:#fff9;
-    --dark-bg:rgba(0,0,0,.7);
-    --light-bg:#eee;
-    --border:.1rem solid var(--black);
-    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+    --black: #222;
+    --white: #fff;
+    --light-black: #777;
+    --light-white: #fff9;
+    --dark-bg: rgba(0,0,0,.7);
+    --light-bg: #eee;
+    --border: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow: 0 1.5rem 3rem rgba(0,0,0,.3);
     --russet: #783D19;
     --laurelgreen: #A9B388;
 }
 
-.footer{
-    background-image: url("/Images/background13.jpeg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: fixed;
-    width: 100%;
-    left: 0px;
-    bottom: 0px;
-}
-.footer .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-    gap: 3rem;
-   
-}
-.footer .box-container .box h3{
-    color: red;
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.footer .box-container .box a{
-    color: black;
-    font-size: 0.5rem;
-    padding-bottom: 1.5rem;
-    display: block;
+main {
+    flex: 1;
 }
-.footer .box-container .box a i{
+
+.footer {
+    background: url('Images/back.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--white);
+    width: 100%;
+    padding: 2rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.footer .box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.footer .box {
+    flex: 1 1 200px;
+    margin: 1rem;
+}
+
+.footer .box h3 {
+    color: red;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.footer .box a {
+    color: black;
+    font-size: 1rem;
+    padding-bottom: .1rem;
+    display: block;
+    transition: color .3s;
+}
+
+.footer .box a i {
     color: var(--main-color);
-    padding-right: .5rem;
+    padding-right: .1rem;
     transition: .2s linear;
 }
-.footer .box-container .box a:hover i{
+
+.footer .box a:hover i {
     padding-right: .2rem;
+    color: var(--main-color);
 }
-.footer .credit{
+
+.footer .credit {
     text-align: center;
-    padding-top: 3rem;
-    margin-top: 3rem;
+    padding: 1rem 0;
+    margin-top: 2rem;
     border-top: .1rem solid var(--dark-bg);
-    font-size: 2rem;
+    font-size: 1rem;
     color: black;
 }
-.footer .credit span{
-    color: var(--main-color)
+
+.footer .credit span {
+    color: var(--main-color);
 }

@@ -14,6 +14,8 @@
     in the family since time immemorial. The first animals were brought to the farm in 2003, and since then, the 
     farm has grown significantly.</p>
      </div>
+</div>
+<div class="home-about1">
      <div class="content">
     <h3>Mission Statement</h3>
     <p>At Kyase Ranch, our mission is to cultivate a sustainable and harmonious relationship between people, 

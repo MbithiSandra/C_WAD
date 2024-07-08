@@ -45,8 +45,9 @@
         <select name="subject_line" id="sb" required>
             <option value="<?php print $spot_msg_row["subject_line"]; ?>"><?php print $spot_msg_row["subject_line"]; ?></option>
             <option value="Email Support">Email Support</option>
-            <option value="eLearning Support">eLearning Support</option>
-            <option value="AMS Support">AMS Support</option>
+            <option value="farm help">Farm Help</option>
+            <option value="Product Ordering">Product Ordering</option>
+            <option value="Event Planning">Event Planning</option>
         </select>
         <br><br>
     <label for="ms">Message:</label><br>

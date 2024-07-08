@@ -46,9 +46,28 @@ if (isset($_POST['send'])) {
    
 
 <?php include_once "Template/nav.php"; ?>
+<div class="heading" style="background:url(Images/flower3.jpg) no-repeat;">
+    <h1>Farmtours</h1>
+</div>
 
-<h2>Information about the farm tours</h2>
 <p>The farm organizes farm tours and trainings for farmers and potential customers. It also hosts seminars and workshops for different companies.</p>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="Images/sale.jpg" class="img-fluid rounded-start" style="width:300px; height:270px;"alt="sale1">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#8E7CA6">SPECIAL OFFER</h5>
+        <p class="card-text" style="color:#D1823C;">Get a 50% off on farmtours and trainings. Offer lasts till September 
+            30th 2024
+        </p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <h2>Schedule and Pricing</h2>
 <button id="load_schedule_btn">Load Training Schedule</button>
@@ -59,15 +78,7 @@ if (isset($_POST['send'])) {
     </div>
     
 
-<section class="home-about">
-    <div class="image">
-        <video width="1000" height="300" autoplay muted controls loop>
-            <source src="http://localhost/C_WAD/Images/mixkit-calves-feeding-in-a-meadow-with-grass-41404-medium.mp4">
-            <source src="C:/Users/mbith/OneDrive/Desktop/Construction project/images/about-vid.ogg" type="video/ogg">
-        </video>
-    </div>
 
-    <h2>Booking Form</h2>
     <section class="booking">
         <h2 class="heading-title">Book Now</h2>
 
